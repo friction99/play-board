@@ -6,16 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsx index.ts",
-    "dev": "tsx watch index.ts"
+    "dev": "tsx watch index.ts",
+    "worker":"tsx watch src/workers/persistWorker.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@bull-board/api": "^7.0.0",
+    "@bull-board/express": "^7.0.0",
+    "bullmq": "^5.76.5",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "ioredis": "^5.10.1",
     "pg": "^8.20.0",
     "socket.io": "^4.8.3",
     "tsx": "^4.21.0"
